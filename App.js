@@ -6,8 +6,7 @@ const App = () => {
   return (
     <View>
       <AddEntry />
-      <Text>Just Edited</Text>
-      <Text>Wow</Text>
+      <Text>Edite AddEntry.js</Text>
     </View>
   );
 };
