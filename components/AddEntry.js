@@ -7,8 +7,8 @@ import DateHeader from './DateHeader'
 
 function SubmitBtn({onPress}) {
     return (
-        <TouchableOpacity onPress={onPress} >
-            <View><Text onPress={onPress} >SUBMIT</Text></View>
+        <TouchableOpacity onPress={onPress}>
+            <Text >SUBMIT</Text>
         </TouchableOpacity>
     )
 }
@@ -20,10 +20,9 @@ export default class AddEntry extends Component {
         run: 5,
         bike: 10,
         swim: 45,
-        sleep: 30,
-        eat:30,
+        sleep: 0,
+        eat:0,
     }
-    // this.submit = this.submit.bind(this)
 
     }
 
@@ -50,22 +49,24 @@ export default class AddEntry extends Component {
             [metric]: value
         })
 
-        submit = () =>{
-            const key = timeToString()
-            const entry = this.state
         
-            //Update Redux
-        
-            this.setState(() => ({ run: 0, bike: 0, swim: 0, sleep: 0, eat: 0 }))
-            console.log ("btn clicked")
-        
-            // Navigate to home
-        
-            // Save to "DB"
-        
-            // Clear local notification
-        }
     }
+
+    submit = () =>{
+        const key = timeToString();
+        const entry = this.state;
+    
+        //Update Redux;
+    
+        this.setState(() => ({ run: 0, bike: 0, swim: 0, sleep: 0, eat: 0 }))
+    
+        // Navigate to home
+    
+        // Save to "DB"
+    
+        // Clear local notification
+    }
+
     render() {
         const metaInfo = getMetricMetaInfo()
         return (
@@ -87,7 +88,7 @@ export default class AddEntry extends Component {
                     )
                 })                        
                 }
-                <SubmitBtn onPress= {this.submit} />
+                <SubmitBtn onPress = {this.submit} />
             </View>
         )
     }
