@@ -1,9 +1,11 @@
 import React, { Component } from "react";
 import { Text, View, TouchableOpacity } from "react-native";
+import { Ionicons } from "@expo/vector-icons";
 import { getMetricMetaInfo, timeToString } from "../utils/helpers";
-import UdaciSlider from './UdaciSlider'
-import UdaciSteppers from './UdaciSteppers'
-import DateHeader from './DateHeader'
+import UdaciSlider from "./UdaciSlider"
+import UdaciSteppers from "./UdaciSteppers"
+import DateHeader from "./DateHeader"
+import TextButton from "./TextButton";
 
 function SubmitBtn({onPress}) {
     return (
@@ -69,6 +71,16 @@ export default class AddEntry extends Component {
 
     render() {
         const metaInfo = getMetricMetaInfo()
+
+        if(this.props.alreadyLogged){
+            return(
+                <View>
+                    <Ionicons name={"happy-outline"} size={100} />
+                    <Text>You already logged your information for today.</Text>
+                    <TextButton onPress={this.reset}>Reset</TextButton>
+                </View>
+            )
+        } else
         return (
             <View>
                 <DateHeader date= {(new Date()).toLocaleDateString()}/>
