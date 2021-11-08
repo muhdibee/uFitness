@@ -3,7 +3,7 @@
 import React from "react";
 import { View } from "react-native";
 import { FontAwesome, MaterialIcons,  MaterialCommunityIcons } from "@expo/vector-icons";
-import { white, red } from "./colors";
+import { white, pink } from "./colors";
 
 export function getMetricMetaInfo(metric) {
     const info = {
@@ -16,7 +16,7 @@ export function getMetricMetaInfo(metric) {
             getIcon() {
                 return (
                 <View>
-                    <MaterialIcons name="directions-run" color={"black"} size={35} />
+                    <MaterialIcons name="directions-run" color={pink} size={35} />
                 </View>
                 )
             }
@@ -30,7 +30,7 @@ export function getMetricMetaInfo(metric) {
             getIcon() {
                 return (
                     <View>
-                        <MaterialCommunityIcons name="bike" color={white} size={32} />
+                        <MaterialCommunityIcons name="bike" color={pink} size={32} />
                     </View>
                 )
             }
@@ -44,7 +44,7 @@ export function getMetricMetaInfo(metric) {
             getIcon() {
                 return (
                     <View>
-                    <MaterialCommunityIcons name="swim" color={white} size={35} />
+                    <MaterialCommunityIcons name="swim" color={pink} size={35} />
                     </View>
                 )
             }
@@ -58,7 +58,7 @@ export function getMetricMetaInfo(metric) {
             getIcon() {
                 return (
                     <View>
-                    <FontAwesome name="bed" color={white} size={30} />
+                    <FontAwesome name="bed" color={pink} size={30} />
                     </View>
                 )
             }
@@ -74,7 +74,7 @@ export function getMetricMetaInfo(metric) {
             getIcon() {
                 return (
                     <View>
-                    <MaterialCommunityIcons name="food" color={white} size={35} />
+                    <MaterialCommunityIcons name="food" color={pink} size={35} />
                     </View>
                 )
             }

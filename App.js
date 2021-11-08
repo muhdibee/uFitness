@@ -6,7 +6,6 @@ const App = () => {
   return (
     <View>
       <AddEntry />
-      <Text>Edite AddEntry.js</Text>
     </View>
   );
 };
