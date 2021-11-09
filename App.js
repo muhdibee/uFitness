@@ -6,6 +6,7 @@ const App = () => {
   return (
     <View>
       <AddEntry />
+      <Text>Base View</Text>
     </View>
   );
 };
