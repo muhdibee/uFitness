@@ -1,18 +1,26 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { CALENDAR_STORAGE_KEY } from './_calendar'
 
-export function submitEntry ({ key, entry }) {
-    return AsyncStorage.mergeItem(CALENDAR_STORAGE_KEY, JSON.stringify({
-        [key]: entry
-      }))
+export async function submitEntry ({ key, entry }) {
+  try {
+    await AsyncStorage.mergeItem(CALENDAR_STORAGE_KEY, JSON.stringify({[key]: entry}))
+  } catch(e) {
+    console.log("Error while submitting entry", e)
+  }
 }
 
-export function removeEntry (key) {
-    return AsyncStorage.getItem(CALENDAR_STORAGE_KEY)
-      .then((results) => {
-        const data = JSON.parse(results)
-        data[key] = undefined
-        delete data[key]
-        AsyncStorage.setItem(CALENDAR_STORAGE_KEY, JSON.stringify(data))
-    })
+export async function removeEntry (key) {
+  const results = await AsyncStorage.getItem(CALENDAR_STORAGE_KEY);
+  const data = JSON.parse(results);
+  try {
+    data[key] = undefined;
+    await delete data[key];
+  } catch (e) {
+    console.log("Error while Deleting", e);
+  }
+  try {
+    await AsyncStorage.setItem(CALENDAR_STORAGE_KEY, JSON.stringify(newResult));
+  } catch (e) {
+    console.log("Error while saving", e);
+  }
 } 

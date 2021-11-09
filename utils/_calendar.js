@@ -27,7 +27,15 @@ function setDummyData () {
       : null
   }
 
-  AsyncStorage.setItem(CALENDAR_STORAGE_KEY, JSON.stringify(dummyData))
+  
+   async (dummyData) => {
+    try {
+      await AsyncStorage.setItem(CALENDAR_STORAGE_KEY, JSON.stringify(dummyData))
+    } catch (e) {
+      console.log("Error during storage", e)
+      // saving error
+    }
+  }
 
   return dummyData
 }
