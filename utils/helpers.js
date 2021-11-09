@@ -1,5 +1,3 @@
-// utils/helpers.js
-
 import React from "react";
 import { View } from "react-native";
 import { FontAwesome, MaterialIcons,  MaterialCommunityIcons } from "@expo/vector-icons";
