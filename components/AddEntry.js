@@ -90,7 +90,7 @@ function SubmitBtn({onPress}) {
             return(
                 <View>
                     <Ionicons name={"happy-outline"} size={100} />
-                    <Text>You already logged your information for today.</Text>
+                    <Text> You already logged your information for today.</Text>
                     <TextButton onPress={this.reset}>Reset</TextButton>
                 </View>
             )

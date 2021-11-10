@@ -9,7 +9,7 @@ const App = () => {
   const store = createStore(reducer);
   return (
     <Provider store={store}>
-        <View>
+        <View style={{flex:1}}>
           <AddEntry />
           <Text>Base View</Text>
         </View>

@@ -13,8 +13,8 @@ export async function removeEntry (key) {
   const results = await AsyncStorage.getItem(CALENDAR_STORAGE_KEY);
   const data = JSON.parse(results);
   try {
-    data[key] = undefined;
-    await delete data[key];
+    // data[key] = undefined;
+    delete data[key];
   } catch (e) {
     console.log("Error while Deleting", e);
   }
