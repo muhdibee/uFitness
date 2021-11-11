@@ -27,12 +27,12 @@ export default function UdaciSlider ({ max, unit, step, value, onIncrement, onDe
             </TouchableOpacity>
           </View>
       }
-<View style={styles.metricCounter}>
-<Text style={{fontSize: 24, textAlign: 'center'}}>{value}</Text>
-<Text style={{fontSize: 18, color: gray}}>{unit}</Text>
-</View>
-</View>
-)
+        <View style={styles.metricCounter}>
+          <Text style={{fontSize: 24, textAlign: 'center'}}>{value}</Text>
+          <Text style={{fontSize: 18, color: gray}}>{unit}</Text>
+        </View>
+    </View>
+  )
 } 
 
 const styles = StyleSheet.create({

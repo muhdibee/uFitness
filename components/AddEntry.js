@@ -90,7 +90,7 @@ function SubmitBtn({onPress}) {
         if(this.props.alreadyLogged){
             return(
                 <View style={styles.center}>
-                    <Ionicons name={Platform.OS === 'ios' ? 'ios-happy-outline' : 'md-happy-outline'} size={100} />
+                    <Ionicons name={Platform.OS === 'ios' ? 'ios-happy-outline' : 'md-happy-outline'} size={100} color={purple} />
                     <Text> You already logged your information for today.</Text>
                     <TextButton style={{ padding: 10 }} onPress={this.reset}>Reset</TextButton>
                 </View>
@@ -104,7 +104,7 @@ function SubmitBtn({onPress}) {
                     const value = this.state[key]
 
                     return(
-                        <View key ={key}>
+                        <View key ={key} style={styles.row}>
                             {getIcon()}
                             {type === 'slider'
                                 ? <UdaciSlider value={value} onChange={(value) => this.slide(key, value)} {...rest}/>
