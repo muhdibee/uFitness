@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View,} from 'react-native';
+import { View,} from 'react-native';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import reducer from './reduders'
@@ -11,7 +11,6 @@ const App = () => {
     <Provider store={store}>
         <View style={{flex:1}}>
           <AddEntry />
-          <Text>Base View</Text>
         </View>
     </Provider>
   );

@@ -1,7 +1,7 @@
 import React from "react";
 import { View, StyleSheet  } from "react-native";
 import { FontAwesome, MaterialIcons,  MaterialCommunityIcons } from "@expo/vector-icons";
-import { white,  red, orange, blue, lightPurp, pink,  } from "./colors";
+import { white,  red, orange, blue, lightPurp} from "./colors";
 
 export function getMetricMetaInfo(metric) {
     const info = {
